@@ -1,7 +1,7 @@
 #include <iostream>  // allows program to output data to the screen
 
 struct Base {
-    virtual void doSomething() {
+    void doSomething() {
         std::cout << "Execute doSomething" << std::endl;
     }
 };
