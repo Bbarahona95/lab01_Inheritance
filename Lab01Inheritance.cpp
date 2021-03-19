@@ -23,4 +23,5 @@ int main(int argc, const char *argv[]) {
     derived2.doSomething();
     derived2.doSomethingElse("Derived2!!!");
 
+    return 0;
 }  // end function main
