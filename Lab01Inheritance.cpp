@@ -1,13 +1,13 @@
 #include <iostream>  // allows program to output data to the screen
 
 struct Base {
-    virtual void do_something() {
-        std::cout << "Execute do_something" << std::endl;
+    virtual void doSomething() {
+        std::cout << "Execute doSomething" << std::endl;
     }
 };
 
 struct Derived : Base {
-    void do_somethingElse(std::string phrase) {
+    void doSomethingElse(std::string phrase) {
         std::cout << phrase << std::endl;
     }
 };
@@ -16,11 +16,11 @@ int main(int argc, const char *argv[]) {
     std::cout << "Welcome to the UNA!" << std::endl;
 
     Derived derived1;
-    derived1.do_something();
-    derived1.do_somethingElse("Derived1!!!");
+    derived1.doSomething();
+    derived1.doSomethingElse("Derived1!!!");
 
     Derived derived2;
-    derived2.do_something();
-    derived2.do_somethingElse("Derived2!!!");
+    derived2.doSomething();
+    derived2.doSomethingElse("Derived2!!!");
 
 }  // end function main
