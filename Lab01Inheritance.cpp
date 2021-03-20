@@ -1,27 +1,26 @@
 #include <iostream>  // allows program to output data to the screen
 
 struct Base {
-    void doSomething() {
-        std::cout << "Execute doSomething" << std::endl;
+    virtual void doSomething() {
+        std::cout << "Base!!!" << std::endl;
     }
 };
 
 struct Derived : Base {
-    void doSomethingElse(std::string phrase) {
+    void doSomething(std::string phrase)  {
         std::cout << phrase << std::endl;
     }
 };
+
 // function main begins program execution
 int main(int argc, const char *argv[]) {
     std::cout << "Welcome to the UNA!" << std::endl;
 
     Derived derived1;
-    derived1.doSomething();
-    derived1.doSomethingElse("Derived1!!!");
+    derived1.doSomething("Derived1!!!");
 
     Derived derived2;
-    derived2.doSomething();
-    derived2.doSomethingElse("Derived2!!!");
+    derived2.doSomething("Derived2!!!");
 
     return 0;
 }  // end function main
