@@ -4,12 +4,14 @@ struct Base {
     virtual void doSomething() {
         std::cout << "Base!!!" << std::endl;
     }
+    virtual ~Base(){}
 };
 
 struct Derived : Base {
     void doSomething(std::string phrase)  {
         std::cout << phrase << std::endl;
     }
+    ~Derived(){}
 };
 
 // function main begins program execution
