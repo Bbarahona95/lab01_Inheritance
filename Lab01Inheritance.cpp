@@ -1,14 +1,14 @@
 #include <iostream>  // allows program to output data to the screen
 
 struct Base {
-    virtual void doSomething(std::string phrase) {
+    virtual void doSomething(std::string phrase) const {
         std::cout << "Base!!!" << std::endl;
     }
     virtual ~Base(){}
 };
 
 struct Derived : Base {
-    void doSomething(std::string phrase)  {
+    void doSomething(std::string phrase) const override  {
         std::cout << phrase << std::endl;
     }
     ~Derived(){}
