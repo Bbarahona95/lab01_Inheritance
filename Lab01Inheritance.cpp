@@ -1,6 +1,8 @@
 #include <iostream>  // allows program to output data to the screen
 
 struct Base {
+    Base() {}
+
     virtual void doSomething(std::string phrase) const {
         std::cout << "Base!!!" << std::endl;
     }
@@ -8,6 +10,8 @@ struct Base {
 };
 
 struct Derived : Base {
+    Derived() {}
+
     void doSomething(std::string phrase) const override  {
         std::cout << phrase << std::endl;
     }
